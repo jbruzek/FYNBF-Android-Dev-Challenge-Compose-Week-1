@@ -24,7 +24,14 @@ import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CornerSize
@@ -49,8 +56,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import com.example.androiddevchallenge.ui.theme.*
-
+import com.example.androiddevchallenge.ui.theme.MyTheme
+import com.example.androiddevchallenge.ui.theme.pink200
+import com.example.androiddevchallenge.ui.theme.pink700
+import com.example.androiddevchallenge.ui.theme.pink900
+import com.example.androiddevchallenge.ui.theme.typography
 
 class MainActivity : AppCompatActivity() {
     private val navigationViewModel by viewModels<Navigator>()
@@ -174,9 +184,9 @@ fun DetailsScreen(pet: Pet) {
 @Composable
 fun BackgroundShape() {
     val color = if (MaterialTheme.colors.isLight) {
-            pink200
-        } else {
-            pink900
+        pink200
+    } else {
+        pink900
     }
     Image(
         painter = painterResource(com.example.androiddevchallenge.R.drawable.background_shape),
@@ -188,18 +198,24 @@ fun BackgroundShape() {
 
 @Composable
 fun MainHeader(text: String, reverse: Boolean) {
-    Surface(color = Color.Transparent, modifier = Modifier
-        .fillMaxWidth()
-        .zIndex(99999f)) {
-        Row(modifier = Modifier
-            .background(
-                shape = if (reverse) {
-                    HeaderShapeReverse
-                } else {
-                    HeaderShape
-                },
-                color = MaterialTheme.colors.primary)
-            .padding(16.dp)) {
+    Surface(
+        color = Color.Transparent,
+        modifier = Modifier
+            .fillMaxWidth()
+            .zIndex(99999f)
+    ) {
+        Row(
+            modifier = Modifier
+                .background(
+                    shape = if (reverse) {
+                        HeaderShapeReverse
+                    } else {
+                        HeaderShape
+                    },
+                    color = MaterialTheme.colors.primary
+                )
+                .padding(16.dp)
+        ) {
             Text(
                 text = text,
                 color = Color.White,
@@ -216,9 +232,11 @@ fun PetListItem(model: Pet, onClick: () -> Unit) {
     } else {
         Color.LightGray
     }
-    Row(modifier = Modifier
-        .fillMaxWidth()
-        .clickable(onClick = onClick)) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+    ) {
         Image(
             painter = painterResource(model.picture),
             contentDescription = "",
