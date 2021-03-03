@@ -12,7 +12,7 @@ This is a simple "pet adoption" app. It shows a list of cats that are available 
 
 
 ## :bulb: Motivation and Context
-I tried to layer non-traditional shapes in my design. Using curves and stacking elements creates an experience that is non-traditional in the modile space.
+I tried to layer non-traditional shapes in my design. Using curves and stacking elements creates an experience that is relatively unique in the modile space.
 
 
 ## :camera_flash: Screenshots
