@@ -1,5 +1,7 @@
 # FYNBF (Find Your New Best Friend)
 
+*Disclaimer: I cannot officially submit this entry to the contest as my current employment makes me ineligible according to the contest rules. whomp whomp*
+
 <!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
 <!--- You can find both of these in the url bar when you open your repository in github. -->
 ![Workflow result](https://github.com/jbruzek/FYNBF-Android-Dev-Challenge-Compose-Week-1/workflows/Check/badge.svg)
