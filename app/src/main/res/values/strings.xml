@@ -12,6 +12,5 @@
     <string name="app_name">AndroidDevChallenge</string>
     <string name="home_dest">home</string>
     <string name="detail_dest">detail</string>
-    <string name="main_header">Adopt a new Best Friend</string>
-    <string name="main_title">Adopt a new Best Friend</string>
+    <string name="main_title">Find Your New Best Friend</string>
 </resources>
